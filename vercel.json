@@ -7,8 +7,5 @@
   "routes": [
     { "src": "/api/(.*)", "dest": "/api/server.js" },
     { "src": "/(.*)", "dest": "/dist/assets/$1" }
-  ],
-  "env": {
-    "MONGO_URI": "@mongo-uri"
-  }
+  ]
 }
