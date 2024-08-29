@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 
 export function useGeolocation(defaultPosition = null) {
@@ -19,7 +18,7 @@ export function useGeolocation(defaultPosition = null) {
         });
         try {
           // Replace `http://localhost:3000` with your server URL if different
-          const response = await fetch("http://localhost:10000/save-position", {
+          const response = await fetch("http://localhost:9000/save-position", {
             method: "POST",
             headers: {
               "Content-Type": "application/json", // Set the content type to JSON
