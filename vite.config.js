@@ -17,4 +17,7 @@ export default defineConfig({
       localsConvention: "camelCaseOnly", // or 'dashes' depending on your preference
     },
   },
+  build: {
+    outDir: "dist",
+  },
 });
