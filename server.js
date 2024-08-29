@@ -14,6 +14,7 @@ app.use(cors()); // Enable CORS for all routes
 
 // MongoDB connection
 const uri = process.env.MONGO_URI;
+``;
 const client = new MongoClient(uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
