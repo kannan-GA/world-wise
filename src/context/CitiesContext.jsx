@@ -64,7 +64,7 @@ function CitiesContext({ children }) {
 
   const [state, dispatch] = useReducer(reducer, initialValue);
   const { cities, isLoading, currentCity, error } = state;
-  const BASE_URL = "http://localhost:3000";
+  const BASE_URL = "http://localhost:10000";
 
   useEffect(function () {
     async function fetchCities() {
