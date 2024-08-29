@@ -1,12 +1,12 @@
 import express from "express";
 import { MongoClient } from "mongodb";
 import dotenv from "dotenv";
-import cors from "cors";
+import cors from "cors"; // Import cors
 
 dotenv.config();
 
 const app = express();
-const port = process.env.PORT || 10000;
+const port = process.env.PORT || 3000;
 
 // Middleware
 app.use(express.json());
@@ -14,7 +14,6 @@ app.use(cors()); // Enable CORS for all routes
 
 // MongoDB connection
 const uri = process.env.MONGO_URI;
-``;
 const client = new MongoClient(uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -31,8 +30,6 @@ async function connectDb() {
 }
 
 // Define API endpoints
-
-// Save user position
 app.post("/save-position", async (req, res) => {
   const { userId, position } = req.body;
   try {
@@ -52,7 +49,6 @@ app.post("/save-position", async (req, res) => {
   }
 });
 
-// Get all cities
 app.get("/cities", async (req, res) => {
   try {
     const db = client.db("geolocationDB");
