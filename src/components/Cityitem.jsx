@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import styles from "./Cityitem.module.css";
+import styles from "./CityItem.module.css";
 import { useCities } from "../context/CitiesContext";
 /* eslint-disable react/prop-types */
 

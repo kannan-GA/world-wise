@@ -12,4 +12,9 @@ export default defineConfig({
     //   emitError: false,
     // }),
   ],
+  css: {
+    modules: {
+      localsConvention: "camelCaseOnly", // or 'dashes' depending on your preference
+    },
+  },
 });
