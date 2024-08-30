@@ -18,16 +18,22 @@ export function useGeolocation(defaultPosition = null) {
         });
         try {
           // Replace `http://localhost:3000` with your server URL if different
-          const response = await fetch("http://localhost:9000/save-position", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json", // Set the content type to JSON
-            },
-            body: JSON.stringify({
-              userId: "some-user-id", // Replace with actual user ID if applicable
-              position: { lat: pos.coords.latitude, lng: pos.coords.longitude },
-            }),
-          });
+          const response = await fetch(
+            "https://demo-jzzg.onrender.com/save-position",
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json", // Set the content type to JSON
+              },
+              body: JSON.stringify({
+                userId: "some-user-id", // Replace with actual user ID if applicable
+                position: {
+                  lat: pos.coords.latitude,
+                  lng: pos.coords.longitude,
+                },
+              }),
+            }
+          );
 
           if (!response.ok) {
             // Check if the response was not successful
