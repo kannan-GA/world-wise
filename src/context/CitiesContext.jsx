@@ -65,6 +65,10 @@ function CitiesContext({ children }) {
   const [state, dispatch] = useReducer(reducer, initialValue);
   const { cities, isLoading, currentCity, error } = state;
   const BASE_URL = "http://localhost:9000";
+  // const BASE_URL =
+  //   process.env.NODE_ENV === "production"
+  //     ? "https://your-netlify-site.netlify.app/.netlify/functions/server"
+  //     : "http://localhost:9000";
 
   useEffect(function () {
     async function fetchCities() {
