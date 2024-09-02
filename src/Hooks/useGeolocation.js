@@ -41,7 +41,7 @@ export function useGeolocation(defaultPosition = null) {
           }
 
           const data = await response.json(); // Parse the JSON response
-          console.log("Position saved successfully", data);
+          // console.log("Position saved successfully", data);
         } catch (error) {
           console.error("Error saving position:", error);
         }
