@@ -23,7 +23,7 @@ function Cityitem({ city }) {
   const { currentCity } = useCities();
   const { cityName, emoji, date, id, position } = city;
 
-  console.log(currentCity, cityName);
+  // console.log(currentCity, cityName);
 
   const { deleteCity } = useCities();
 
