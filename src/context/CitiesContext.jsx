@@ -79,7 +79,7 @@ function CitiesContext({ children }) {
           throw new Error(`HTTP error! status: ${res.status}`);
         }
         const data = await res.json();
-        console.log(data);
+        // console.log(data);
         dispatch({ type: "cities/loaded", payload: data });
       } catch (error) {
         dispatch({
